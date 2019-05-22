@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,700,800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  margin: 5px 15px 15px 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 40px 90px;
+      grid-template-columns: 1fr 40px 90px;
+  -ms-grid-rows: 90px;
+      grid-template-rows: 90px;
+}
+
+body {
+  background-color: white;
+}
+
+main {
+  background-color: #333645;
+  height: 80vh;
+}
+
+h1 {
+  color: #333645;
+  background-color: white;
+}
+
+.main-logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: calc(100% - 15px);
+  max-width: 400px;
+}
+
+.icon-phone {
+  color: #333645;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+.button-sidebar-menu {
+  color: #333645;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+.header-menu-button {
+  color: white;
+  background-color: #333645;
+  border: none;
+  padding: 5px 14px;
+  border-radius: 5%;
+  font-size: .8em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.header-menu-button:hover {
+  background-color: #262834;
+  cursor: pointer;
+}
+
+.carousel {
+  overflow: hidden;
+  height: 900px;
+  background: url("http://placeimg.com/1000/1000/tech/grayscale");
+  background-size: cover;
+  text-align: center;
+  -webkit-box-shadow: inset 50px 0 100px #000;
+          box-shadow: inset 50px 0 100px #000;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.carousel div {
+  margin-top: 200px;
+}
+
+.carousel div h1 {
+  background-color: transparent;
+  text-transform: uppercase;
+  color: white;
+  font-size: 3em;
+  font-weight: normal;
+}
+
+.carousel div p {
+  color: white;
+  font-size: 1.3em;
+}
+
+.carousel div button {
+  color: white;
+  background-color: #926fb1;
+  border: none;
+  padding: 15px 18px;
+  border-radius: 3%;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.carousel div button:hover {
+  background-color: #79439a;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

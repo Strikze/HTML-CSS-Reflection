@@ -1,0 +1,47 @@
+
+.carousel {
+
+    overflow: hidden;
+    height: 900px;
+
+    background: url('http://placeimg.com/1000/1000/tech/grayscale');
+    background-size: cover;
+    text-align: center;
+    box-shadow: inset 50px 0 100px #000;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    div {
+        margin-top: 200px;
+
+        h1 {
+            background-color: transparent;
+            text-transform: uppercase;
+            color: white;
+            font-size: 3em;
+            font-weight: normal;
+        }
+
+        p {
+            color: white;
+            font-size: 1.3em;
+        }
+
+        button {
+            color: white;
+            background-color: $colour-design-primary; 
+            border: none;
+            padding: 15px 18px;
+            border-radius: 3%;
+            font-size:  1.2em;
+            text-transform:uppercase;
+            line-height: 1.5;
+            &:hover {
+                background-color: $colour-design-secondary;
+                cursor: pointer;
+            }        
+        }
+
+    }
+
+}

@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,700,800&display=swap');
+
+ //Utilites
+ @import 'utilities/variables';
+ 
+ //'utilites/mixins',
+//     'utilities/functions',
+//     'utilities/variables',
+//     'utilities/helpers';
+
+// Base Styles
+@import 'base/base';
+
+// Layout Styles
+@import 'layout/header',
+    'layout/main';
+// @import 'layout/containers',
+//     'layout/header',
+//     'layout/card',
+//     'layout/footer';
+
+
+// Component Styles
+// @import 'components/nav',
+//     'components/buttons',
+//     'components/icons',
+//     'components/images';
