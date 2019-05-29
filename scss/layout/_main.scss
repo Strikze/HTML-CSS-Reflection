@@ -1,47 +1,211 @@
 
 .carousel {
-
-    overflow: hidden;
-    height: 900px;
-
-    background: url('http://placeimg.com/1000/1000/tech/grayscale');
-    background-size: cover;
+    // Layout
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    box-shadow: inset 50px 0 100px #000;
     padding-left: 20px;
     padding-right: 20px;
+    flex-basis: 20px;
 
-    div {
-        margin-top: 200px;
+    height: calc(100vh - 120px);
 
-        h1 {
-            background-color: transparent;
-            text-transform: uppercase;
-            color: white;
-            font-size: 3em;
-            font-weight: normal;
-        }
+    // text-align: center;
 
-        p {
-            color: white;
-            font-size: 1.3em;
-        }
+    //appearance 
+    background: url('/img/carousel/home-1MMT.jpg');
+    background-size: cover;
+    box-shadow: inset 50px 0 100px #000;
 
-        button {
-            color: white;
-            background-color: $colour-design-primary; 
-            border: none;
-            padding: 15px 18px;
-            border-radius: 3%;
-            font-size:  1.2em;
-            text-transform:uppercase;
-            line-height: 1.5;
-            &:hover {
-                background-color: $colour-design-secondary;
-                cursor: pointer;
-            }        
-        }
 
+    h1 {
+        background-color: transparent;
+        text-transform: uppercase;
+        color: white;
+        font-size: 3em;
+        font-weight: normal;
     }
 
+    p {
+        color: white;
+        font-size: 1.3em;
+    }
+
+    button {
+        @include btn-template(white, $colour-design-primary, $colour-design-primary, $colour-design-secondary);     
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.about {
+    margin-top: 50px;
+    background-color: $colour-primary;
+    color: white;
+    padding: 25px 25px 50px 25px;
+    line-height: 1.875;
+
+    h1 {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        background-color: inherit;
+        color: inherit;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin-bottom: 25px;
+        font-size: $font-size-3;
+    }
+
+    p:first-of-type {
+        font-weight: bold;
+    }
+
+    button {
+        @include btn-template($colour-primary, white, $colour-primary, darken(white, 10%));     
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.063em;
+    }
+}
+
+.heading-latest {
+    display: inline-block;
+
+    border-bottom: 5px solid $colour-primary;
+    padding-bottom: 35px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    color: $colour-primary;
+    font-weight: 600;
+}
+
+
+article {
+    margin-bottom: 30px;
+}
+
+.article-figure {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+
+    overflow: hidden;
+    position: relative;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    a {
+        position: absolute;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.75rem;
+        padding: 5px 10px;
+        background-color: $colour-design-primary;   // COLOUR
+        top: 7px;
+        right: 0;
+    
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.article-content {
+    padding: 20px 30px 25px;
+
+    h3  a {
+        color: $colour-design-primary;  // COLOUR
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        font-size: 0.8125rem;
+        line-height: 1.375rem;
+        color: $colour-text;
+    }
+
+    button {
+        @include btn-template(white, $colour-design-primary, white, $colour-design-secondary);  // COLOUR
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.article-author {
+    display: flex;
+    flex-basis: 10px auto;
+    border-top: 1px solid #ccc;
+
+    margin-top: 30px;
+    padding-top: 35px;
+
+     img {
+         border-radius: 50%;
+         margin-right: 20px;
+     }
+}
+
+.article-author-name {
+    color: $colour-text;
+    margin-top: 5px;
+    font-size: $font-size-4;
+    line-height: 1.4;
+
+    small {
+        font-size: inherit;
+    }
+}
+
+@mixin article-department($colour-main, $colour-second)
+{
+    figure a{
+        background-color: $colour-main;
+    }
+    
+    section {
+    
+        h3 a {
+            color: $colour-main;
+        }
+    
+        button {
+            background-color: $colour-main;
+            &:hover {
+                background-color: $colour-second;
+            }
+        }
+    }
+}
+
+.article-design {
+    @include article-department($colour-design-primary, $colour-design-secondary);
+}
+
+.article-telecoms {
+    @include article-department($colour-telecoms-primary, $colour-telecoms-secondary);
+}
+
+.article-marketing {
+    @include article-department($colour-marketing-primary, $colour-marketing-secondary);
 }

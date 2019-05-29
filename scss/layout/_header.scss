@@ -1,34 +1,44 @@
+header {
+    height: 90px;
+    margin: 5px 15px 15px 15px;
+    
+    display: grid;
+    grid-template-columns: 1fr 40px 90px;
+    grid-template-rows: 90px;
+    align-items: center;
+    justify-items: right;
+}
 
 .main-logo {
-    align-self: center;
     width: calc(100% - 15px);
     max-width: 400px;
+    justify-self: left;
 }
 
 .icon-phone {
     color: $colour-primary;
-    align-self: center;
-    justify-self: right;
-}
-
-.button-sidebar-menu {
-    color: $colour-primary;
-    align-self: center;
-    justify-self: right;
-}
-
-.header-menu-button {
-    color: white;
-    background-color: $colour-primary; 
-    border: none;
-    padding: 5px 14px;
-    border-radius: 5%;
-    font-size:  .8em;
-    text-transform:uppercase;
-    line-height: 1.5;
 
     &:hover {
-        background-color: $colour-secondary;
-        cursor: pointer;
+        color: $colour-secondary;
+    }
+}
+
+.button-menu {
+    color: $colour-primary;
+
+    button {
+        color: white;
+        background-color: $colour-primary; 
+        border: none;
+        padding: 5px 14px;
+        border-radius: 5%;
+        font-size:  .8em;
+        text-transform:uppercase;
+        line-height: 1.5;
+    
+        &:hover {
+            background-color: $colour-secondary;
+            cursor: pointer;
+        }
     }
 }

@@ -1,0 +1,31 @@
+
+footer {
+    background-color: $colour-primary;
+    color: white;
+
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-left: 10px;
+
+    ul {
+        list-style-type: none;
+        list-style-position: inside;
+        padding-left: 0;
+        font-size: $font-size-5;
+        line-height: 1.5;
+
+        li a {
+            color: white;
+            text-decoration: none;
+
+            // 4 layers deep!?!
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+address {
+    font-style: normal;
+}
