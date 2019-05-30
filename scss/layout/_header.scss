@@ -6,7 +6,7 @@ header {
     grid-template-columns: 1fr 40px 90px;
     grid-template-rows: 90px;
     align-items: center;
-    justify-items: right;
+    justify-items: left;
 }
 
 .main-logo {
@@ -20,6 +20,10 @@ header {
 
     &:hover {
         color: $colour-secondary;
+    }
+
+    @include mq('s') {
+        display: none;
     }
 }
 

@@ -348,10 +348,6 @@ template {
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background-color: white;
-}
-
 h1 {
   font-size: 2.25rem;
   text-transform: uppercase;
@@ -389,7 +385,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: right;
+  justify-items: left;
 }
 
 .main-logo {
@@ -405,6 +401,12 @@ header {
 
 .icon-phone:hover {
   color: #262834;
+}
+
+@media (min-width: 770px) {
+  .icon-phone {
+    display: none;
+  }
 }
 
 .button-menu {
@@ -446,6 +448,7 @@ header {
   padding-right: 20px;
   -ms-flex-preferred-size: 20px;
       flex-basis: 20px;
+  margin-bottom: 50px;
   height: calc(100vh - 120px);
   background: url("/img/carousel/home-1MMT.jpg");
   background-size: cover;
@@ -487,6 +490,18 @@ header {
   width: 95%;
 }
 
+@media (min-width: 770px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 900px;
+  }
+}
+
 .about {
   margin-top: 50px;
   background-color: #333645;
@@ -495,10 +510,18 @@ header {
   line-height: 1.875;
 }
 
+@media (min-width: 992px) {
+  .about {
+    background-image: url(/img/branded.png);
+    background-size: auto;
+    background-position: center;
+  }
+}
+
 .about h1 {
   margin-top: 5px;
   margin-bottom: 10px;
-  background-color: inherit;
+  background-color: transparent;
   color: inherit;
   font-weight: normal;
   text-transform: uppercase;
@@ -544,6 +567,20 @@ header {
 
 article {
   margin-bottom: 30px;
+}
+
+@media (min-width: 770px) {
+  .articles {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 350px 350px;
+        grid-template-columns: 350px 350px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    grid-gap: 30px;
+  }
 }
 
 .article-figure {
@@ -691,13 +728,66 @@ article {
   background-color: #25a25a;
 }
 
+@media (min-width: 770px) {
+  .article-marketing {
+    display: none;
+  }
+}
+
+.clients {
+  display: none;
+}
+
+.clients img {
+  height: 45px;
+}
+
+@media (min-width: 992px) {
+  .clients img {
+    height: 60px;
+  }
+}
+
+@media (min-width: 770px) {
+  .clients {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    grid-column-gap: 20px;
+  }
+}
+
+.hover-img-swap > img:last-of-type {
+  display: none;
+}
+
+.hover-img-swap:hover > img:first-of-type {
+  display: none;
+}
+
+.hover-img-swap:hover > img:last-of-type {
+  display: inline;
+}
+
 .card-design {
   border-radius: 4px;
   padding: 25px;
-  margin-top: 15px;
+  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
   color: #333645;
+}
+
+@media (min-width: 770px) {
+  .card-design {
+    width: 350px;
+    margin-bottom: 0;
+  }
 }
 
 .card-design i {
@@ -764,10 +854,17 @@ article {
 .card-support {
   border-radius: 4px;
   padding: 25px;
-  margin-top: 15px;
+  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
   color: #333645;
+}
+
+@media (min-width: 770px) {
+  .card-support {
+    width: 350px;
+    margin-bottom: 0;
+  }
 }
 
 .card-support i {
@@ -834,10 +931,17 @@ article {
 .card-telecoms {
   border-radius: 4px;
   padding: 25px;
-  margin-top: 15px;
+  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
   color: #333645;
+}
+
+@media (min-width: 770px) {
+  .card-telecoms {
+    width: 350px;
+    margin-bottom: 0;
+  }
 }
 
 .card-telecoms i {
@@ -904,10 +1008,17 @@ article {
 .card-software {
   border-radius: 4px;
   padding: 25px;
-  margin-top: 15px;
+  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
   color: #333645;
+}
+
+@media (min-width: 770px) {
+  .card-software {
+    width: 350px;
+    margin-bottom: 0;
+  }
 }
 
 .card-software i {
@@ -974,10 +1085,17 @@ article {
 .card-marketing {
   border-radius: 4px;
   padding: 25px;
-  margin-top: 15px;
+  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
   color: #333645;
+}
+
+@media (min-width: 770px) {
+  .card-marketing {
+    width: 350px;
+    margin-bottom: 0;
+  }
 }
 
 .card-marketing i {
@@ -1044,10 +1162,17 @@ article {
 .card-security {
   border-radius: 4px;
   padding: 25px;
-  margin-top: 15px;
+  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
   color: #333645;
+}
+
+@media (min-width: 770px) {
+  .card-security {
+    width: 350px;
+    margin-bottom: 0;
+  }
 }
 
 .card-security i {
@@ -1118,32 +1243,149 @@ article {
   display: inline-block;
 }
 
+@media (min-width: 770px) {
+  .cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 380px 380px;
+        grid-template-columns: 380px 380px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    grid-row-gap: 30px;
+  }
+}
+
 footer {
+  background-color: #333645;
+}
+
+.footer-content {
   background-color: #333645;
   color: white;
   margin-top: 50px;
-  padding-top: 30px;
-  padding-left: 10px;
+  padding: 20px 15px 40px 15px;
 }
 
-footer ul {
+.footer-content h3 {
+  margin: 30px 0;
+}
+
+.footer-content ul {
   list-style-type: none;
   list-style-position: inside;
   padding-left: 0;
   font-size: 0.8125rem;
-  line-height: 1.5;
 }
 
-footer ul li a {
+.footer-content ul li {
+  line-height: 1.7;
+}
+
+.footer-content ul li a {
   color: white;
   text-decoration: none;
 }
 
-footer ul li a:hover {
+.footer-content ul li a:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 770px) {
+  .footer-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    grid-area: 'contact about', 'website social';
+    grid-column-gap: 50px;
+    grid-row-gap: 0;
+  }
+}
+
+.contact-us {
+  grid: contact;
+}
+
+.about-netmatters {
+  grid: about;
+}
+
+.website {
+  grid: website;
+}
+
+.social-media {
+  grid: social;
 }
 
 address {
   font-style: normal;
+}
+
+.social-links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50px 50px;
+      grid-template-rows: 50px 50px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  text-align: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.social-links a {
+  height: auto;
+  background-color: #262834;
+  color: white;
+  padding-top: 10px;
+}
+
+.facebook:hover {
+  background-color: #3b5998;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.linkedin:hover {
+  background-color: #0077B5;
+}
+
+.accreditations {
+  display: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 770px) {
+  .accreditations {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .accreditations nav img {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+  }
+}
+
+.accred-large {
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */

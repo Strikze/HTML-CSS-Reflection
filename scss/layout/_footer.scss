@@ -1,18 +1,28 @@
 
 footer {
+    background-color: $colour-primary;   
+}
+
+.footer-content {
     background-color: $colour-primary;
     color: white;
 
     margin-top: 50px;
-    padding-top: 30px;
-    padding-left: 10px;
+    padding: 20px 15px 40px 15px;
+
+    h3 {
+        margin: 30px 0;
+    }
 
     ul {
         list-style-type: none;
         list-style-position: inside;
         padding-left: 0;
         font-size: $font-size-5;
-        line-height: 1.5;
+
+        li {
+            line-height: 1.7;
+        }
 
         li a {
             color: white;
@@ -24,8 +34,86 @@ footer {
             }
         }
     }
+
+    @include mq('s') {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-area: 
+            'contact about',
+            'website social';
+        grid-column-gap: 50px;
+        grid-row-gap: 0;
+    }
+}
+
+.contact-us {
+    grid: contact;
+}
+
+.about-netmatters {
+    grid: about;
+}
+
+.website {
+    grid: website;
+}
+
+.social-media {
+    grid: social;
 }
 
 address {
     font-style: normal;
+}
+
+.social-links {
+    display: grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    text-align: center;
+    align-items: stretch;
+
+    a {
+        height: auto;
+        background-color: $colour-secondary;
+        color: white;
+        padding-top: 10px;
+    }
+}
+
+.facebook:hover {
+    background-color: #3b5998;
+}
+
+.twitter:hover {
+    background-color: #1da1f2; 
+}
+
+.linkedin:hover {
+    background-color: #0077B5; 
+}
+
+.accreditations {
+    display: none;
+    justify-content: space-around;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include mq('s') {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    nav img {
+       @include mq('m') {
+           transform: scale(1.6);
+       }
+    }
+}
+
+.accred-large {
+    height: 100px;
 }

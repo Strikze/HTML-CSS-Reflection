@@ -20,7 +20,7 @@
             <p>For buisnesses looking to make a strong and effective first impression.</p>
             <button href="#">find out more &nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button>
         </div>
-        <div class="container">
+        <div class="container cards">
             <div class="card-design">
                 <i class="fas fa-code fa-2x"></i>
                 <h2>web design</h2>
@@ -65,14 +65,18 @@
             </div>                                                               
         </div>   <!-- /container -->
         <div class="about">
-            <h1>netmatters</h1>
-            <p>Netmatters Ltd is a leading web design, IT support and digital marketing agency based in Wymondham, Norfolk.</p>
-            <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
-            <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
-            <button>out culture&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button>
+            <div class="container">
+                <h1>netmatters</h1>
+                <p>Netmatters Ltd is a leading web design, IT support and digital marketing agency based in Wymondham, Norfolk.</p>
+                <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
+                <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
+                <button>out culture&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></button>
+            </div>   <!-- /container -->
         </div>   <!-- /about -->
         <div class="container">
             <h2 class="heading-latest">latest</h2>
+        </div>
+        <div class="articles container">
             <article class="article-design">
                 <figure class="article-figure">
                     <img src="img/article/happy-25th-birthday-vs38.jpg" alt="Digital Marketing Case Study">
@@ -126,41 +130,92 @@
                         </div>
                     </div>
                 </section>
-            </article>                        
+            </article>                   
         </div>   <!-- /container -->
+        <div class="clients">
+            <nav class="hover-img-swap">
+                <img src="/img/clients/home-T5gi.jpg" alt="alt"> 
+                <img src="/img/clients/home-gZQR.png" alt="alt">
+            </nav>
+            <nav class="hover-img-swap">
+                <img src="/img/clients/home-BsyK.jpg" alt="alt"> 
+                <img src="/img/clients/home-MjHw.png" alt="alt"> 
+            </nav>    
+            <nav class="hover-img-swap">       
+                <img src="/img/clients/home-RfLc.jpg" alt="alt">
+                <img src="/img/clients/home-ukEL.png" alt="alt">  
+            </nav>   
+            <nav class="hover-img-swap">            
+                <img src="/img/clients/home-jHUl.jpg" alt="alt">  
+                <img src="/img/clients/home-kGn4.png" alt="alt">  
+            </nav>   
+        </div>
     </main>
     <footer>
-        <h3>contact us</h3>
-        <address>
-            <ul>
-                <li>11 Penfold Drive</li>
-                <li>Wymondham</li>
-                <li>Norfolk</li>
-                <li>NR18 0WZ</li>
-                <br>
-                <li>Tel: 01603 51 50 07</li>
-                <li>Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a></li>
-            </ul>
-        </address>
-        <h3>about netmatters</h3>
-        <ul>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Our Careers</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Our Office Tour</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">UK Domains</a></li>
-        </ul>
-        <h3>website</h3>
-        <ul>
-            <li><a href="#">Sitemap</a></li>
-            <li>&copy; Copyright Netmatters Ltd. 2019</li>
-            <li>All rights reserved</li>
-        </ul>
-        <h3>social media</h3>
+        <div class="container footer-content">
+            <div class="contact-us">
+                <h3>contact us</h3>
+                <address>
+                    <ul>
+                        <li>11 Penfold Drive</li>
+                        <li>Wymondham</li>
+                        <li>Norfolk</li>
+                        <li>NR18 0WZ</li>
+                        <br>
+                        <li>Tel: 01603 51 50 07</li>
+                        <li>Email: <a href="mailto:support@netmatters.com">support@netmatters.com</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div class="about-netmatters">
+                <h3>about netmatters</h3>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Our Careers</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Our Office Tour</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">UK Domains</a></li>
+                </ul>
+            </div>
+            <div class="website">
+                <h3>website</h3>
+                <ul>
+                    <li><a href="#">Sitemap</a></li>
+                    <li>&copy; Copyright Netmatters Ltd. 2019</li>
+                    <li>All rights reserved</li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>social media</h3>
+                <div class="social-links">
+                    <a class="facebook" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a class="twitter" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a class="linkedin" href="#"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                </div>
+            </div>
+        </div>   <!-- /container -->
     </footer>
+    <div class="accreditations container">
+        <nav>
+            <img src="/img/accreditations/silver-microsoft-partner.jpg" alt="alt">
+        </nav>
+        <nav class="hover-img-swap">
+            <img class="accred-large" src="/img/accreditations/future-50-bw.jpg" alt="alt"> 
+            <img class="accred-large" src="/img/accreditations/future-50.jpg" alt="alt"> 
+        </nav>
+        <nav class="hover-img-swap">              
+            <img class="accred-large" src="/img/accreditations/qms-bw.jpg" alt="alt">    
+            <img class="accred-large" src="/img/accreditations/qms.jpg" alt="alt"> 
+        </nav>
+        <nav class="hover-img-swap">           
+            <img src="/img/accreditations/norfolk-carbon-charter-bw.jpg" alt="alt">  
+            <img src="/img/accreditations/norfolk-carbon-charter.jpg" alt="alt"> 
+        </nav>  
+    </div>   <!-- /container -->
+    
 </body>
 </html>
 

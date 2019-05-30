@@ -9,6 +9,7 @@
     padding-left: 20px;
     padding-right: 20px;
     flex-basis: 20px;
+    margin-bottom: 50px;
 
     height: calc(100vh - 120px);
 
@@ -41,19 +42,34 @@
 .container {
     margin: 0 auto;
     width: 95%;
+
+    @include mq('s')
+    {
+        width: 700px;
+    }
+
+    @include mq('m') {
+        width: 900px;
+    }
 }
 
 .about {
     margin-top: 50px;
     background-color: $colour-primary;
     color: white;
-    padding: 25px 25px 50px 25px;
+     padding: 25px 25px 50px 25px;
     line-height: 1.875;
+
+    @include mq('m') {
+        background-image: url(/img/branded.png);
+        background-size: auto;
+        background-position: center;
+    }
 
     h1 {
         margin-top: 5px;
         margin-bottom: 10px;
-        background-color: inherit;
+        background-color: transparent;
         color: inherit;
         font-weight: normal;
         text-transform: uppercase;
@@ -91,6 +107,16 @@
 
 article {
     margin-bottom: 30px;
+}
+
+.articles {
+    @include mq('s') {
+        display: grid;
+        grid-template-columns: 350px 350px;
+        justify-content: center;
+        justify-items: center;
+        grid-gap: 30px;
+    }
 }
 
 .article-figure {
@@ -208,4 +234,43 @@ article {
 
 .article-marketing {
     @include article-department($colour-marketing-primary, $colour-marketing-secondary);
+
+    @include mq('s') {
+        display: none;
+    }
+}
+
+.clients {
+    display: none;
+
+     img {
+        height: 45px;
+
+        @include mq('m') {
+            height: 60px;
+        }
+     }
+
+     @include mq('s')
+     {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        justify-items: center;
+        grid-column-gap: 20px;
+     }
+}
+
+
+.hover-img-swap > img:last-of-type {
+    display: none;
+}
+
+.hover-img-swap:hover {
+    > img:first-of-type {
+        display: none;
+    }
+    > img:last-of-type {
+        display: inline;
+    }
 }

@@ -27,3 +27,9 @@ $font-size-3: 1rem;
 $font-size-4: 0.875rem;
 $font-size-5: 0.8125rem;
 $font-size-button: 1rem;
+
+$breakpoints: (
+	's': 770px,
+	'm': 992px,
+	'l': 1260px,
+);
