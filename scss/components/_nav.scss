@@ -1,0 +1,116 @@
+.navbar ul {
+    background-color: $colour-primary;
+    color: white;
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    margin: 0;
+
+    li {
+        display: inline-block;
+
+        font-size: $font-size-2;
+        text-transform: uppercase;
+        padding: 10px 33px;
+
+        small {
+            font-size: $font-size-6;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.nav-design {
+    i {
+        color: $colour-design-primary;
+    }
+
+    &:hover {
+        background-color: $colour-design-primary;
+        cursor: pointer;
+
+        i {
+            color: white;
+        }
+    }
+}
+
+.nav-support {
+    i {
+        color: $colour-support-primary;
+    }
+
+    
+    &:hover {
+        background-color: $colour-support-primary;
+        cursor: pointer;
+
+        i {
+            color: white;
+        }
+    }
+}
+
+.nav-services {
+    i {
+        color: $colour-telecoms-primary;
+    }
+
+    
+    &:hover {
+        background-color: $colour-telecoms-primary;
+        cursor: pointer;
+
+        i {
+            color: white;
+        }
+    }
+}
+
+.nav-software {
+    i {
+        color: $colour-software-primary;
+    }
+
+    
+    &:hover {
+        background-color: $colour-software-primary;
+        cursor: pointer;
+
+        i {
+            color: white;
+        }
+    }
+}
+
+.nav-marketing {
+    i {
+        color: $colour-marketing-primary;
+    }
+
+    
+    &:hover {
+        background-color: $colour-marketing-primary;
+        cursor: pointer;
+
+        i {
+            color: white;
+        }
+    }
+}
+
+.nav-security {
+    i {
+        color: $colour-security-primary;
+    }
+
+    
+    &:hover {
+        background-color: $colour-security-primary;
+        cursor: pointer;
+
+        i {
+            color: white;
+        }
+    }
+}

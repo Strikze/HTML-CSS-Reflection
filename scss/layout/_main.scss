@@ -13,8 +13,6 @@
 
     height: calc(100vh - 120px);
 
-    // text-align: center;
-
     //appearance 
     background: url('/img/carousel/home-1MMT.jpg');
     background-size: cover;
@@ -27,15 +25,26 @@
         color: white;
         font-size: 3em;
         font-weight: normal;
+        margin-bottom: 0;
     }
 
     p {
+        display: inline-block;
         color: white;
         font-size: 1.3em;
+        line-height: 1.7;
+        width: 450px;
     }
 
-    button {
+    .button {
         @include btn-template(white, $colour-design-primary, $colour-design-primary, $colour-design-secondary);     
+        padding: 17px 15px;
+    }
+
+    @include mq('m') {
+        text-align: left;
+        align-items: flex-start;
+        padding-left: 40px;
     }
 }
 
@@ -84,11 +93,12 @@
         font-weight: bold;
     }
 
-    button {
+    .button {
         @include btn-template($colour-primary, white, $colour-primary, darken(white, 10%));     
         padding-top: 10px;
         padding-bottom: 10px;
         font-size: 1.063em;
+        display: inline-block;
     }
 }
 
@@ -117,6 +127,10 @@ article {
         justify-items: center;
         grid-gap: 30px;
     }
+
+    @include mq('m') {
+        grid-template-columns: 450px 450px;
+    }
 }
 
 .article-figure {
@@ -127,26 +141,33 @@ article {
     overflow: hidden;
     position: relative;
 
-    img {
+    a img {
         display: block;
         width: 100%;
-    }
 
-    a {
-        position: absolute;
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 0.75rem;
-        padding: 5px 10px;
-        background-color: $colour-design-primary;   // COLOUR
-        top: 7px;
-        right: 0;
-    
+        transition-duration: .2s;
+
         &:hover {
-            text-decoration: underline;
+            transform: scale(1.1);
+            opacity: 0.8;
         }
+    }
+}
+
+.news-link {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    background-color: $colour-design-primary;   // COLOUR
+    top: 7px;
+    right: 0;
+
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -170,11 +191,12 @@ article {
         color: $colour-text;
     }
 
-    button {
+    .button {
         @include btn-template(white, $colour-design-primary, white, $colour-design-secondary);  // COLOUR
         margin-top: 10px;
         padding-top: 10px;
         padding-bottom: 10px;
+        display: inline-block;
     }
 }
 
@@ -215,7 +237,7 @@ article {
             color: $colour-main;
         }
     
-        button {
+        .button {
             background-color: $colour-main;
             &:hover {
                 background-color: $colour-second;

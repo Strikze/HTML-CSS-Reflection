@@ -39,7 +39,7 @@ footer {
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
-        grid-area: 
+        grid-template-areas: 
             'contact about',
             'website social';
         grid-column-gap: 50px;

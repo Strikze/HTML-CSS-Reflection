@@ -373,30 +373,101 @@ article {
   border: 1px solid #ccc;
 }
 
-header {
-  height: 90px;
-  margin: 5px 15px 15px 15px;
+a {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.banner {
+  height: 110px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 40px 90px;
-      grid-template-columns: 1fr 40px 90px;
-  -ms-grid-rows: 90px;
-      grid-template-rows: 90px;
+  -ms-grid-columns: 1fr (auto)[2];
+      grid-template-columns: 1fr repeat(2, auto);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: left;
 }
 
-.main-logo {
-  width: calc(100% - 15px);
+@media (min-width: 770px) {
+  .banner {
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner {
+    -ms-grid-columns: 1fr (auto)[3];
+        grid-template-columns: 1fr repeat(3, auto);
+    width: 900px;
+    margin: 0 auto;
+  }
+}
+
+.main-logo img {
+  width: 100%;
   max-width: 400px;
-  -ms-grid-column-align: left;
-      justify-self: left;
+  margin-left: 20px;
+}
+
+.btn-support {
+  color: white;
+  background-color: #4183d7;
+  border: none;
+  border-radius: 3%;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 13px 15px;
+  display: inline-block;
+  display: none;
+  margin: 0 10px;
+  padding: 18px 15px;
+}
+
+.btn-support:hover {
+  background-color: #2A6EC6;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .btn-support {
+    display: inline-block;
+  }
+}
+
+.btn-contact {
+  color: white;
+  background-color: #84858f;
+  border: none;
+  border-radius: 3%;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 13px 15px;
+  display: inline-block;
+  display: none;
+  margin: 0 10px;
+  padding: 18px 15px;
+}
+
+.btn-contact:hover {
+  background-color: #999AA2;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .btn-contact {
+    display: inline-block;
+  }
 }
 
 .icon-phone {
   color: #333645;
+  margin-left: 20px;
+  margin-right: 30px;
 }
 
 .icon-phone:hover {
@@ -411,22 +482,25 @@ header {
 
 .button-menu {
   color: #333645;
-}
-
-.button-menu button {
   color: white;
   background-color: #333645;
   border: none;
   padding: 5px 14px;
   border-radius: 5%;
-  font-size: .8em;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   line-height: 1.5;
+  text-align: center;
+  margin: 0 10px;
 }
 
-.button-menu button:hover {
+.button-menu:hover {
   background-color: #262834;
   cursor: pointer;
+}
+
+.button-menu:active {
+  text-decoration: none;
 }
 
 .carousel {
@@ -462,27 +536,42 @@ header {
   color: white;
   font-size: 3em;
   font-weight: normal;
+  margin-bottom: 0;
 }
 
 .carousel p {
+  display: inline-block;
   color: white;
   font-size: 1.3em;
+  line-height: 1.7;
+  width: 450px;
 }
 
-.carousel button {
+.carousel .button {
   color: white;
   background-color: #926fb1;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
+  padding: 17px 15px;
 }
 
-.carousel button:hover {
+.carousel .button:hover {
   background-color: #79439a;
   cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .carousel {
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-left: 40px;
+  }
 }
 
 .container {
@@ -536,21 +625,22 @@ header {
   font-weight: bold;
 }
 
-.about button {
+.about .button {
   color: #333645;
   background-color: white;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 1.063em;
+  display: inline-block;
 }
 
-.about button:hover {
+.about .button:hover {
   background-color: #e6e6e6;
   cursor: pointer;
 }
@@ -583,6 +673,13 @@ article {
   }
 }
 
+@media (min-width: 992px) {
+  .articles {
+    -ms-grid-columns: 450px 450px;
+        grid-template-columns: 450px 450px;
+  }
+}
+
 .article-figure {
   margin: 0;
   padding: 0;
@@ -591,12 +688,20 @@ article {
   position: relative;
 }
 
-.article-figure img {
+.article-figure a img {
   display: block;
   width: 100%;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
 }
 
-.article-figure a {
+.article-figure a img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.news-link {
   position: absolute;
   color: white;
   text-decoration: none;
@@ -609,7 +714,7 @@ article {
   right: 0;
 }
 
-.article-figure a:hover {
+.news-link:hover {
   text-decoration: underline;
 }
 
@@ -634,21 +739,22 @@ article {
   color: #333645;
 }
 
-.article-content button {
+.article-content .button {
   color: white;
   background-color: #926fb1;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  display: inline-block;
 }
 
-.article-content button:hover {
+.article-content .button:hover {
   background-color: #79439a;
   cursor: pointer;
 }
@@ -688,11 +794,11 @@ article {
   color: #926fb1;
 }
 
-.article-design section button {
+.article-design section .button {
   background-color: #926fb1;
 }
 
-.article-design section button:hover {
+.article-design section .button:hover {
   background-color: #79439a;
 }
 
@@ -704,11 +810,11 @@ article {
   color: #d64541;
 }
 
-.article-telecoms section button {
+.article-telecoms section .button {
   background-color: #d64541;
 }
 
-.article-telecoms section button:hover {
+.article-telecoms section .button:hover {
   background-color: #bc2c28;
 }
 
@@ -720,11 +826,11 @@ article {
   color: #2ecc71;
 }
 
-.article-marketing section button {
+.article-marketing section .button {
   background-color: #2ecc71;
 }
 
-.article-marketing section button:hover {
+.article-marketing section .button:hover {
   background-color: #25a25a;
 }
 
@@ -790,6 +896,12 @@ article {
   }
 }
 
+@media (min-width: 992px) {
+  .card-design {
+    width: 450px;
+  }
+}
+
 .card-design i {
   display: inline-block;
   width: 60px;
@@ -812,21 +924,19 @@ article {
   line-height: 1.6;
 }
 
-.card-design button {
+.card-design .button {
   color: white;
   background-color: #926fb1;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
   font-size: 1.1em;
-  padding: 10px 15px;
-  border: none;
 }
 
-.card-design button:hover {
+.card-design .button:hover {
   background-color: #79439a;
   cursor: pointer;
 }
@@ -842,7 +952,7 @@ article {
   background-color: white;
 }
 
-.card-design:hover button {
+.card-design:hover .button {
   background-color: white;
   color: #926fb1;
 }
@@ -864,6 +974,12 @@ article {
   .card-support {
     width: 350px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-support {
+    width: 450px;
   }
 }
 
@@ -889,21 +1005,19 @@ article {
   line-height: 1.6;
 }
 
-.card-support button {
+.card-support .button {
   color: white;
   background-color: #4183d7;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
   font-size: 1.1em;
-  padding: 10px 15px;
-  border: none;
 }
 
-.card-support button:hover {
+.card-support .button:hover {
   background-color: #79439a;
   cursor: pointer;
 }
@@ -919,7 +1033,7 @@ article {
   background-color: white;
 }
 
-.card-support:hover button {
+.card-support:hover .button {
   background-color: white;
   color: #4183d7;
 }
@@ -941,6 +1055,12 @@ article {
   .card-telecoms {
     width: 350px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-telecoms {
+    width: 450px;
   }
 }
 
@@ -966,21 +1086,19 @@ article {
   line-height: 1.6;
 }
 
-.card-telecoms button {
+.card-telecoms .button {
   color: white;
   background-color: #d64541;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
   font-size: 1.1em;
-  padding: 10px 15px;
-  border: none;
 }
 
-.card-telecoms button:hover {
+.card-telecoms .button:hover {
   background-color: #79439a;
   cursor: pointer;
 }
@@ -996,7 +1114,7 @@ article {
   background-color: white;
 }
 
-.card-telecoms:hover button {
+.card-telecoms:hover .button {
   background-color: white;
   color: #d64541;
 }
@@ -1018,6 +1136,12 @@ article {
   .card-software {
     width: 350px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-software {
+    width: 450px;
   }
 }
 
@@ -1043,21 +1167,19 @@ article {
   line-height: 1.6;
 }
 
-.card-software button {
+.card-software .button {
   color: white;
   background-color: #67809f;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
   font-size: 1.1em;
-  padding: 10px 15px;
-  border: none;
 }
 
-.card-software button:hover {
+.card-software .button:hover {
   background-color: #79439a;
   cursor: pointer;
 }
@@ -1073,7 +1195,7 @@ article {
   background-color: white;
 }
 
-.card-software:hover button {
+.card-software:hover .button {
   background-color: white;
   color: #67809f;
 }
@@ -1095,6 +1217,12 @@ article {
   .card-marketing {
     width: 350px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-marketing {
+    width: 450px;
   }
 }
 
@@ -1120,21 +1248,19 @@ article {
   line-height: 1.6;
 }
 
-.card-marketing button {
+.card-marketing .button {
   color: white;
   background-color: #2ecc71;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
   font-size: 1.1em;
-  padding: 10px 15px;
-  border: none;
 }
 
-.card-marketing button:hover {
+.card-marketing .button:hover {
   background-color: #79439a;
   cursor: pointer;
 }
@@ -1150,7 +1276,7 @@ article {
   background-color: white;
 }
 
-.card-marketing:hover button {
+.card-marketing:hover .button {
   background-color: white;
   color: #2ecc71;
 }
@@ -1172,6 +1298,12 @@ article {
   .card-security {
     width: 350px;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-security {
+    width: 450px;
   }
 }
 
@@ -1197,21 +1329,19 @@ article {
   line-height: 1.6;
 }
 
-.card-security button {
+.card-security .button {
   color: white;
   background-color: #f62459;
   border: none;
-  padding: 15px 18px;
   border-radius: 3%;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.5;
+  padding: 13px 15px;
+  display: inline-block;
   font-size: 1.1em;
-  padding: 10px 15px;
-  border: none;
 }
 
-.card-security button:hover {
+.card-security .button:hover {
   background-color: #79439a;
   cursor: pointer;
 }
@@ -1227,7 +1357,7 @@ article {
   background-color: white;
 }
 
-.card-security:hover button {
+.card-security:hover .button {
   background-color: white;
   color: #f62459;
 }
@@ -1254,6 +1384,13 @@ article {
             justify-content: center;
     justify-items: center;
     grid-row-gap: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .cards {
+    -ms-grid-columns: 480px 480px;
+        grid-template-columns: 480px 480px;
   }
 }
 
@@ -1300,7 +1437,7 @@ footer {
         grid-template-columns: auto auto;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
-    grid-area: 'contact about', 'website social';
+        grid-template-areas: 'contact about', 'website social';
     grid-column-gap: 50px;
     grid-row-gap: 0;
   }
@@ -1387,5 +1524,104 @@ address {
 
 .accred-large {
   height: 100px;
+}
+
+.navbar ul {
+  background-color: #333645;
+  color: white;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  padding: 10px 33px;
+}
+
+.navbar ul li small {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
+
+.nav-design i {
+  color: #926fb1;
+}
+
+.nav-design:hover {
+  background-color: #926fb1;
+  cursor: pointer;
+}
+
+.nav-design:hover i {
+  color: white;
+}
+
+.nav-support i {
+  color: #4183d7;
+}
+
+.nav-support:hover {
+  background-color: #4183d7;
+  cursor: pointer;
+}
+
+.nav-support:hover i {
+  color: white;
+}
+
+.nav-services i {
+  color: #d64541;
+}
+
+.nav-services:hover {
+  background-color: #d64541;
+  cursor: pointer;
+}
+
+.nav-services:hover i {
+  color: white;
+}
+
+.nav-software i {
+  color: #67809f;
+}
+
+.nav-software:hover {
+  background-color: #67809f;
+  cursor: pointer;
+}
+
+.nav-software:hover i {
+  color: white;
+}
+
+.nav-marketing i {
+  color: #2ecc71;
+}
+
+.nav-marketing:hover {
+  background-color: #2ecc71;
+  cursor: pointer;
+}
+
+.nav-marketing:hover i {
+  color: white;
+}
+
+.nav-security i {
+  color: #f62459;
+}
+
+.nav-security:hover {
+  background-color: #f62459;
+  cursor: pointer;
+}
+
+.nav-security:hover i {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
