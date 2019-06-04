@@ -1,116 +1,160 @@
+.navbar {
+    position: relative;
+
+    display: none;
+    @include mq('m') {
+        display: block;
+    }
+}
+
 .navbar ul {
+    // remove bullet point styling
+    padding-left: 0;    
+    list-style: none;
+    list-style-position: inside;
+
     background-color: $colour-primary;
     color: white;
-    list-style-type: none;
-    padding-left: 0;
-    text-align: center;
     margin: 0;
 
-    li {
-        display: inline-block;
+    display: flex;
+    justify-content: center;
 
+    li:first-of-type {
+        border-left: none;
+    }
+
+    li:last-of-type {
+        border-right: none;
+    }
+
+    li {
         font-size: $font-size-2;
         text-transform: uppercase;
-        padding: 10px 33px;
+        color: white;
+
+        border-right: 1px solid lighten($colour-primary, 10%);
+        border-left: 1px solid lighten(black, 10%);
+
+        a {
+            display: block;
+            padding: 16px 33px;
+            color: white;
+            text-align: center;
+        }
 
         small {
             font-size: $font-size-6;
-            text-transform: uppercase;
         }
     }
 }
 
-.nav-design {
+@mixin nav-department($name, $colour) {
+    
     i {
-        color: $colour-design-primary;
+        color: $colour;
     }
 
     &:hover {
-        background-color: $colour-design-primary;
+        background-color: $colour;
+        border-right: 1px solid $colour;
+        border-left: 1px solid $colour;
         cursor: pointer;
 
         i {
             color: white;
         }
+
+         ~ .#{$name}-bar {
+            display: block;
+        }
     }
+
+}
+
+
+
+.nav-design {
+    @include nav-department(design, $colour-design-primary);
 }
 
 .nav-support {
-    i {
-        color: $colour-support-primary;
-    }
-
-    
-    &:hover {
-        background-color: $colour-support-primary;
-        cursor: pointer;
-
-        i {
-            color: white;
-        }
-    }
+    @include nav-department(support, $colour-support-primary);
 }
 
-.nav-services {
-    i {
-        color: $colour-telecoms-primary;
-    }
-
-    
-    &:hover {
-        background-color: $colour-telecoms-primary;
-        cursor: pointer;
-
-        i {
-            color: white;
-        }
-    }
+.nav-telecoms {
+    @include nav-department(telecoms, $colour-telecoms-primary);
 }
 
 .nav-software {
-    i {
-        color: $colour-software-primary;
-    }
-
-    
-    &:hover {
-        background-color: $colour-software-primary;
-        cursor: pointer;
-
-        i {
-            color: white;
-        }
-    }
+    @include nav-department(software, $colour-software-primary);
 }
 
 .nav-marketing {
-    i {
-        color: $colour-marketing-primary;
+    @include nav-department(marketing, $colour-marketing-primary);
+}
+
+.nav-security {
+    @include nav-department(security, $colour-security-primary);
+}
+
+
+
+.divider {
+    display: inline-block;
+    background-color: white;
+    height: 1px;
+    width: 6px;
+}
+
+@mixin department-bar($colour) {
+    display: none;
+    position: absolute;
+    bottom: -46px;
+    left: 0;
+    width: 100%;
+
+    &:hover {
+        display: block;
     }
 
-    
-    &:hover {
-        background-color: $colour-marketing-primary;
-        cursor: pointer;
+    ul {
+        background-color: darken($colour, 10%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        i {
-            color: white;
+        li {
+            border: none;
+            font-size: $font-size-4;
+    
+            a {
+                padding: 15px 20px;
+            }
         }
     }
 }
 
-.nav-security {
-    i {
-        color: $colour-security-primary;
-    }
+.design-bar {
+    @include department-bar($colour-design-primary);
+}
 
-    
-    &:hover {
-        background-color: $colour-security-primary;
-        cursor: pointer;
+.support-bar {
+    @include department-bar($colour-support-primary);
+}
 
-        i {
-            color: white;
-        }
-    }
+.telecoms-bar {
+    @include department-bar($colour-telecoms-primary);
+}
+
+.software-bar {
+    @include department-bar($colour-software-primary);
+}
+
+.marketing-bar {
+    @include department-bar($colour-marketing-primary);
+}
+
+.security-bar {
+    @include department-bar($colour-security-primary);
 }

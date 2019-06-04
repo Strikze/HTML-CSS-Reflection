@@ -570,7 +570,7 @@ button:focus {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-left: 40px;
+    padding-left: 15%;
   }
 }
 
@@ -588,6 +588,12 @@ button:focus {
 @media (min-width: 992px) {
   .container {
     width: 900px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .container {
+    width: 1150px;
   }
 }
 
@@ -645,6 +651,13 @@ button:focus {
   cursor: pointer;
 }
 
+@media (min-width: 1260px) {
+  .about .container {
+    width: 700px;
+    margin-left: 150px;
+  }
+}
+
 .heading-latest {
   display: inline-block;
   border-bottom: 5px solid #333645;
@@ -677,6 +690,13 @@ article {
   .articles {
     -ms-grid-columns: 450px 450px;
         grid-template-columns: 450px 450px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .articles {
+    -ms-grid-columns: (370px)[3];
+        grid-template-columns: repeat(3, 370px);
   }
 }
 
@@ -840,6 +860,12 @@ article {
   }
 }
 
+@media (min-width: 1260px) {
+  .article-marketing {
+    display: block;
+  }
+}
+
 .clients {
   display: none;
 }
@@ -854,6 +880,12 @@ article {
   }
 }
 
+@media (min-width: 1260px) {
+  .clients img {
+    height: 80px;
+  }
+}
+
 @media (min-width: 770px) {
   .clients {
     display: -ms-grid;
@@ -864,7 +896,13 @@ article {
         -ms-flex-pack: center;
             justify-content: center;
     justify-items: center;
-    grid-column-gap: 20px;
+    grid-column-gap: 30px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .clients {
+    grid-column-gap: 50px;
   }
 }
 
@@ -882,24 +920,15 @@ article {
 
 .card-design {
   border-radius: 4px;
-  padding: 25px;
-  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
+}
+
+.card-design a {
+  display: block;
   color: #333645;
-}
-
-@media (min-width: 770px) {
-  .card-design {
-    width: 350px;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-design {
-    width: 450px;
-  }
+  padding: 30px;
+  height: 100%;
 }
 
 .card-design i {
@@ -917,6 +946,7 @@ article {
   font-size: 1.2em;
   font-weight: normal;
   text-transform: capitalize;
+  margin-bottom: .2em;
 }
 
 .card-design p {
@@ -961,26 +991,23 @@ article {
   background-color: white;
 }
 
+@media (min-width: 770px) {
+  .card-design {
+    grid-area: design;
+  }
+}
+
 .card-support {
   border-radius: 4px;
-  padding: 25px;
-  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
+}
+
+.card-support a {
+  display: block;
   color: #333645;
-}
-
-@media (min-width: 770px) {
-  .card-support {
-    width: 350px;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-support {
-    width: 450px;
-  }
+  padding: 30px;
+  height: 100%;
 }
 
 .card-support i {
@@ -998,6 +1025,7 @@ article {
   font-size: 1.2em;
   font-weight: normal;
   text-transform: capitalize;
+  margin-bottom: .2em;
 }
 
 .card-support p {
@@ -1042,26 +1070,23 @@ article {
   background-color: white;
 }
 
+@media (min-width: 770px) {
+  .card-support {
+    grid-area: support;
+  }
+}
+
 .card-telecoms {
   border-radius: 4px;
-  padding: 25px;
-  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
+}
+
+.card-telecoms a {
+  display: block;
   color: #333645;
-}
-
-@media (min-width: 770px) {
-  .card-telecoms {
-    width: 350px;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-telecoms {
-    width: 450px;
-  }
+  padding: 30px;
+  height: 100%;
 }
 
 .card-telecoms i {
@@ -1079,6 +1104,7 @@ article {
   font-size: 1.2em;
   font-weight: normal;
   text-transform: capitalize;
+  margin-bottom: .2em;
 }
 
 .card-telecoms p {
@@ -1123,26 +1149,23 @@ article {
   background-color: white;
 }
 
+@media (min-width: 770px) {
+  .card-telecoms {
+    grid-area: telecoms;
+  }
+}
+
 .card-software {
   border-radius: 4px;
-  padding: 25px;
-  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
+}
+
+.card-software a {
+  display: block;
   color: #333645;
-}
-
-@media (min-width: 770px) {
-  .card-software {
-    width: 350px;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-software {
-    width: 450px;
-  }
+  padding: 30px;
+  height: 100%;
 }
 
 .card-software i {
@@ -1160,6 +1183,7 @@ article {
   font-size: 1.2em;
   font-weight: normal;
   text-transform: capitalize;
+  margin-bottom: .2em;
 }
 
 .card-software p {
@@ -1204,26 +1228,23 @@ article {
   background-color: white;
 }
 
+@media (min-width: 770px) {
+  .card-software {
+    grid-area: software;
+  }
+}
+
 .card-marketing {
   border-radius: 4px;
-  padding: 25px;
-  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
+}
+
+.card-marketing a {
+  display: block;
   color: #333645;
-}
-
-@media (min-width: 770px) {
-  .card-marketing {
-    width: 350px;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-marketing {
-    width: 450px;
-  }
+  padding: 30px;
+  height: 100%;
 }
 
 .card-marketing i {
@@ -1241,6 +1262,7 @@ article {
   font-size: 1.2em;
   font-weight: normal;
   text-transform: capitalize;
+  margin-bottom: .2em;
 }
 
 .card-marketing p {
@@ -1285,26 +1307,23 @@ article {
   background-color: white;
 }
 
+@media (min-width: 770px) {
+  .card-marketing {
+    grid-area: marketing;
+  }
+}
+
 .card-security {
   border-radius: 4px;
-  padding: 25px;
-  margin-bottom: 30px;
   text-align: center;
   border: 1px solid #b3b3b3;
+}
+
+.card-security a {
+  display: block;
   color: #333645;
-}
-
-@media (min-width: 770px) {
-  .card-security {
-    width: 350px;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-security {
-    width: 450px;
-  }
+  padding: 30px;
+  height: 100%;
 }
 
 .card-security i {
@@ -1322,6 +1341,7 @@ article {
   font-size: 1.2em;
   font-weight: normal;
   text-transform: capitalize;
+  margin-bottom: .2em;
 }
 
 .card-security p {
@@ -1366,6 +1386,12 @@ article {
   background-color: white;
 }
 
+@media (min-width: 770px) {
+  .card-security {
+    grid-area: security;
+  }
+}
+
 .card-line {
   background-color: #333645;
   height: 3px;
@@ -1373,17 +1399,22 @@ article {
   display: inline-block;
 }
 
+.cards {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 30px;
+}
+
 @media (min-width: 770px) {
   .cards {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 380px 380px;
         grid-template-columns: 380px 380px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     justify-items: center;
-    grid-row-gap: 30px;
+    grid-gap: 30px;
+        grid-template-areas: "design support" "telecoms software" "marketing security";
   }
 }
 
@@ -1391,6 +1422,17 @@ article {
   .cards {
     -ms-grid-columns: 480px 480px;
         grid-template-columns: 480px 480px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .cards {
+    -ms-grid-columns: (270px)[4];
+        grid-template-columns: repeat(4, 270px);
+    -ms-grid-rows: 320px 320px;
+        grid-template-rows: 320px 320px;
+    grid-column-gap: 30px;
+        grid-template-areas: "design design support support" "telecoms software marketing security";
   }
 }
 
@@ -1437,26 +1479,22 @@ footer {
         grid-template-columns: auto auto;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
-        grid-template-areas: 'contact about', 'website social';
     grid-column-gap: 50px;
     grid-row-gap: 0;
   }
 }
 
-.contact-us {
-  grid: contact;
+@media (min-width: 992px) {
+  .footer-content {
+    grid-column-gap: 30px;
+  }
 }
 
-.about-netmatters {
-  grid: about;
-}
-
-.website {
-  grid: website;
-}
-
-.social-media {
-  grid: social;
+@media (min-width: 1260px) {
+  .footer-content {
+    -ms-grid-columns: (auto)[3] 250px;
+        grid-template-columns: repeat(3, auto) 250px;
+  }
 }
 
 address {
@@ -1522,29 +1560,68 @@ address {
   }
 }
 
+@media (min-width: 1260px) {
+  .accreditations nav img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .accred-large {
   height: 100px;
 }
 
+.navbar {
+  position: relative;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    display: block;
+  }
+}
+
 .navbar ul {
+  padding-left: 0;
+  list-style: none;
+  list-style-position: inside;
   background-color: #333645;
   color: white;
-  list-style-type: none;
-  padding-left: 0;
-  text-align: center;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar ul li:first-of-type {
+  border-left: none;
+}
+
+.navbar ul li:last-of-type {
+  border-right: none;
 }
 
 .navbar ul li {
-  display: inline-block;
   font-size: 1.25rem;
   text-transform: uppercase;
-  padding: 10px 33px;
+  color: white;
+  border-right: 1px solid #494d62;
+  border-left: 1px solid #1a1a1a;
+}
+
+.navbar ul li a {
+  display: block;
+  padding: 16px 33px;
+  color: white;
+  text-align: center;
 }
 
 .navbar ul li small {
   font-size: 0.625rem;
-  text-transform: uppercase;
 }
 
 .nav-design i {
@@ -1553,11 +1630,17 @@ address {
 
 .nav-design:hover {
   background-color: #926fb1;
+  border-right: 1px solid #926fb1;
+  border-left: 1px solid #926fb1;
   cursor: pointer;
 }
 
 .nav-design:hover i {
   color: white;
+}
+
+.nav-design:hover ~ .design-bar {
+  display: block;
 }
 
 .nav-support i {
@@ -1566,6 +1649,8 @@ address {
 
 .nav-support:hover {
   background-color: #4183d7;
+  border-right: 1px solid #4183d7;
+  border-left: 1px solid #4183d7;
   cursor: pointer;
 }
 
@@ -1573,17 +1658,27 @@ address {
   color: white;
 }
 
-.nav-services i {
+.nav-support:hover ~ .support-bar {
+  display: block;
+}
+
+.nav-telecoms i {
   color: #d64541;
 }
 
-.nav-services:hover {
+.nav-telecoms:hover {
   background-color: #d64541;
+  border-right: 1px solid #d64541;
+  border-left: 1px solid #d64541;
   cursor: pointer;
 }
 
-.nav-services:hover i {
+.nav-telecoms:hover i {
   color: white;
+}
+
+.nav-telecoms:hover ~ .telecoms-bar {
+  display: block;
 }
 
 .nav-software i {
@@ -1592,11 +1687,17 @@ address {
 
 .nav-software:hover {
   background-color: #67809f;
+  border-right: 1px solid #67809f;
+  border-left: 1px solid #67809f;
   cursor: pointer;
 }
 
 .nav-software:hover i {
   color: white;
+}
+
+.nav-software:hover ~ .software-bar {
+  display: block;
 }
 
 .nav-marketing i {
@@ -1605,11 +1706,17 @@ address {
 
 .nav-marketing:hover {
   background-color: #2ecc71;
+  border-right: 1px solid #2ecc71;
+  border-left: 1px solid #2ecc71;
   cursor: pointer;
 }
 
 .nav-marketing:hover i {
   color: white;
+}
+
+.nav-marketing:hover ~ .marketing-bar {
+  display: block;
 }
 
 .nav-security i {
@@ -1618,10 +1725,227 @@ address {
 
 .nav-security:hover {
   background-color: #f62459;
+  border-right: 1px solid #f62459;
+  border-left: 1px solid #f62459;
   cursor: pointer;
 }
 
 .nav-security:hover i {
   color: white;
+}
+
+.nav-security:hover ~ .security-bar {
+  display: block;
+}
+
+.divider {
+  display: inline-block;
+  background-color: white;
+  height: 1px;
+  width: 6px;
+}
+
+.design-bar {
+  display: none;
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 100%;
+}
+
+.design-bar:hover {
+  display: block;
+}
+
+.design-bar ul {
+  background-color: #79539a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.design-bar ul li {
+  border: none;
+  font-size: 0.875rem;
+}
+
+.design-bar ul li a {
+  padding: 15px 20px;
+}
+
+.support-bar {
+  display: none;
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 100%;
+}
+
+.support-bar:hover {
+  display: block;
+}
+
+.support-bar ul {
+  background-color: #286abd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.support-bar ul li {
+  border: none;
+  font-size: 0.875rem;
+}
+
+.support-bar ul li a {
+  padding: 15px 20px;
+}
+
+.telecoms-bar {
+  display: none;
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 100%;
+}
+
+.telecoms-bar:hover {
+  display: block;
+}
+
+.telecoms-bar ul {
+  background-color: #bc2c28;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.telecoms-bar ul li {
+  border: none;
+  font-size: 0.875rem;
+}
+
+.telecoms-bar ul li a {
+  padding: 15px 20px;
+}
+
+.software-bar {
+  display: none;
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 100%;
+}
+
+.software-bar:hover {
+  display: block;
+}
+
+.software-bar ul {
+  background-color: #526781;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.software-bar ul li {
+  border: none;
+  font-size: 0.875rem;
+}
+
+.software-bar ul li a {
+  padding: 15px 20px;
+}
+
+.marketing-bar {
+  display: none;
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 100%;
+}
+
+.marketing-bar:hover {
+  display: block;
+}
+
+.marketing-bar ul {
+  background-color: #25a25a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.marketing-bar ul li {
+  border: none;
+  font-size: 0.875rem;
+}
+
+.marketing-bar ul li a {
+  padding: 15px 20px;
+}
+
+.security-bar {
+  display: none;
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 100%;
+}
+
+.security-bar:hover {
+  display: block;
+}
+
+.security-bar ul {
+  background-color: #de093f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.security-bar ul li {
+  border: none;
+  font-size: 0.875rem;
+}
+
+.security-bar ul li a {
+  padding: 15px 20px;
 }
 /*# sourceMappingURL=style.css.map */

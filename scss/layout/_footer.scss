@@ -39,28 +39,17 @@ footer {
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
-        grid-template-areas: 
-            'contact about',
-            'website social';
         grid-column-gap: 50px;
         grid-row-gap: 0;
     }
-}
 
-.contact-us {
-    grid: contact;
-}
+    @include mq('m') {
+        grid-column-gap: 30px;
+    }
 
-.about-netmatters {
-    grid: about;
-}
-
-.website {
-    grid: website;
-}
-
-.social-media {
-    grid: social;
+    @include mq('l') {
+        grid-template-columns: repeat(3, auto) 250px;
+    }
 }
 
 address {
@@ -111,6 +100,10 @@ address {
        @include mq('m') {
            transform: scale(1.6);
        }
+
+       @include mq('l') {
+        transform: scale(1);
+    }
     }
 }
 
