@@ -14,16 +14,11 @@
 // Base Styles
 @import 'base/base';
 
-// Layout Styles
-@import 'layout/header',
-    'layout/main',
-    'layout/card',
-    'layout/footer';
-// @import 'layout/containers',
-
-
-// Component Styles
- @import 'components/nav';
-//     'components/buttons',
-//     'components/icons',
-//     'components/images';
+// Main Sections
+@import 'section/main',
+    'section/header',  
+    'section/nav',
+    'section/banner',
+    'section/department-cards',
+    'section/articles',
+    'section/footer';
