@@ -25,18 +25,18 @@ article {
 
     @include mq('s') {
         display: grid;
-        grid-template-columns: 350px 350px;
+        grid-template-columns: 350px 30px 350px;
         justify-content: center;
         justify-items: center;
-        grid-gap: 30px;
+        //grid-gap: 30px;
     }
 
     @include mq('m') {
-        grid-template-columns: 450px 450px;
+        grid-template-columns: 450px 30px 450px;
     }
 
     @include mq('l') {
-        grid-template-columns: repeat(3, 370px);
+        grid-template-columns: 370px 30px 370px 30px 370px;
     }
 }
 
@@ -54,10 +54,14 @@ article {
 
         transition-duration: .2s;
 
-        &:hover {
-            transform: scale(1.1);
-            opacity: 0.8;
-        }
+        @include mq('m') {
+
+            &:hover {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+
+        }   
     }
 }
 
@@ -155,10 +159,19 @@ article {
 
 .article-design {
     @include article-department($colour-design-primary, $colour-design-secondary);
+
+    @include mq('s') {
+        grid-column: 1;
+    }
+
 }
 
 .article-telecoms {
     @include article-department($colour-telecoms-primary, $colour-telecoms-secondary);
+
+    @include mq('s') {
+        grid-column: 3;
+    }    
 }
 
 .article-marketing {
@@ -170,5 +183,6 @@ article {
 
     @include mq('l') {
         display: block;
+        grid-column: 5;
     }
 }

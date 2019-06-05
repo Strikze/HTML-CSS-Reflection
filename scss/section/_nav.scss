@@ -69,8 +69,8 @@
             color: white;
         }
 
-         ~ .#{$name}-bar {
-            display: block;
+        ~ .#{$name}-bar {
+           display: block;
         }
     }
 
@@ -118,6 +118,8 @@
     left: 0;
     width: 100%;
 
+    background-color: darken($colour, 10%);
+
     &:hover {
         display: block;
     }
@@ -125,8 +127,19 @@
     ul {
         background-color: darken($colour, 10%);
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+
+        margin-left: auto;
+        margin-right:auto;
+
+        @include mq('m') {
+            width: 950px;
+        }
+
+        @include mq('l') {
+            width: 1200px;
+        }
 
         li {
             border: none;
@@ -142,6 +155,7 @@
         }
     }
 }
+
 
 .design-bar {
     @include department-bar($colour-design-primary);
