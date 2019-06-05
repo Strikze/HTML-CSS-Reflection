@@ -17,13 +17,13 @@
 
 @mixin mq($break) {
 
-    @if $break == 'm' {
-        @media (min-width: map-get($breakpoints, 'm')) {
+    @if $break == 's' {
+        @media (min-width: map-get($breakpoints, 's')) {
             @content;
         }
     }
-    @else if $break == 's' {
-        @media (min-width: map-get($breakpoints, 's')) {
+    @else if $break == 'm' {
+        @media (min-width: map-get($breakpoints, 'm')) {
             @content;
         }				
     }
