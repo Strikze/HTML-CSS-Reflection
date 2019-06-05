@@ -1241,7 +1241,7 @@ header a {
   color: white;
   font-size: 1.3em;
   line-height: 1.7;
-  width: 450px;
+  max-width: 450px;
 }
 
 .banner .button {
