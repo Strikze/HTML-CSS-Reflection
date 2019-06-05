@@ -5,38 +5,34 @@
     border-bottom: 5px solid $colour-primary;
     padding-bottom: 35px;
     margin-top: 40px;
-
     color: $colour-primary;
-    font-weight: 600;
 }
+
+.articles-background {
+    background: linear-gradient(to bottom, rgb(240, 240, 240) 0%, #FFFFFF 100%);
+ }
 
 article {
     margin-bottom: 30px;
 }
 
-.articles-background {
-   background: linear-gradient(to bottom, rgb(240, 240, 240) 0%, #FFFFFF 100%);
-}
 
 .articles {
-   
-
     padding-top: 50px;
 
     @include mq('s') {
         display: grid;
-        grid-template-columns: 350px 30px 350px;
+        grid-template-columns: 350px 30px 350px;    //30px gap
         justify-content: center;
         justify-items: center;
-        //grid-gap: 30px;
     }
 
     @include mq('m') {
-        grid-template-columns: 450px 30px 450px;
+        grid-template-columns: 450px 30px 450px;    //30px gap
     }
 
     @include mq('l') {
-        grid-template-columns: 370px 30px 370px 30px 370px;
+        grid-template-columns: 370px 30px 370px 30px 370px; //30px gap
     }
 }
 
@@ -66,21 +62,28 @@ article {
 }
 
 .news-link {
+    // position
     position: absolute;
-    color: white;
+    top: 7px;
+    right: 0;
+    
+    // text
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.75rem;
+
+    // styling
+    color: white;
+    background-color: $colour-design-primary;
     padding: 5px 10px;
-    background-color: $colour-design-primary;   // COLOUR
-    top: 7px;
-    right: 0;
 
     &:hover {
         text-decoration: underline;
     }
 }
+
+// CONTENT
 
 .article-content {
     padding: 20px 30px 25px;
@@ -88,8 +91,7 @@ article {
     h3  a {
         color: $colour-design-primary;  // COLOUR
         text-decoration: none;
-        font-size: 1rem;
-        font-weight: 600;
+        font-weight: bold;
 
         &:hover {
             text-decoration: underline;
@@ -97,9 +99,9 @@ article {
     }
 
     p {
-        font-size: 0.8125rem;
-        line-height: 1.375rem;
-        color: $colour-text;
+        font-size: $font-size-5;
+        line-height: 1.6;
+        color: $colour-text-light;
     }
 
     .button {
@@ -110,6 +112,8 @@ article {
         display: inline-block;
     }
 }
+
+// AUTHOR
 
 .article-author {
     display: flex;
@@ -129,12 +133,16 @@ article {
     color: $colour-text;
     margin-top: 5px;
     font-size: $font-size-4;
+    font-weight: normal;
     line-height: 1.4;
 
     small {
+        color: $colour-text-light;
         font-size: inherit;
     }
 }
+
+// Department colour styling
 
 @mixin article-department($colour-main, $colour-second)
 {

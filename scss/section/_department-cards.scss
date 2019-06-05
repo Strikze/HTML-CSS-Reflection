@@ -1,6 +1,7 @@
 
 .department-cards {
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto 30px) auto;
     background: radial-gradient(ellipse at center, rgb(233, 232, 232) 0%, #FFFFFF 100%);
     

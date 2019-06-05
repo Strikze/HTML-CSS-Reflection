@@ -1,8 +1,12 @@
 header {
     display: grid;
     grid-template-columns: 1fr repeat(2, auto);
-
     padding: 18px 0;
+
+    // Required with grid for IE11
+    a {
+        display: block;
+    }
 
     @include mq('s') {
         grid-template-columns: 1fr auto;
@@ -13,29 +17,26 @@ header {
         width: 900px;
         margin: 0 auto;
     }
-
-    a {
-        display: block;
-    }
 }
 
 .main-logo {
     grid-column: 1;
     align-self: center;
-}
-.main-logo-image {
 
-    width: 100%;
-    max-width: 400px;
-    margin-left: 20px;
+    img {
+        width: 100%;
+        max-width: 400px;
+        margin-left: 20px;
+    }
 }
 
 .btn-support {
+    @include btn-template(white, #4183d7, white, #2A6EC6);
+
+    display: none;
     grid-column: 2;
     align-self: center;
 
-     @include btn-template(white, #4183d7, white, #2A6EC6);
-    display: none;
     margin: 0 10px;
     padding: 18px 15px;
 
@@ -46,11 +47,12 @@ header {
 }
 
 .btn-contact {
+    @include btn-template(white, #84858f, white, #999AA2);
+
     grid-column: 3;
     align-self: center;
-
-    @include btn-template(white, #84858f, white, #999AA2);
     display: none;
+
     margin: 0 10px;
     padding: 18px 15px;
 
@@ -67,13 +69,13 @@ header {
     color: white;
     background-color: $colour-primary; 
 
-    // // text
+    // text
     font-size:  $font-size-5;
     text-transform:uppercase;
     line-height: 1.5;
     text-align: center;
 
-    // // layout
+    // layout
     border: none;
     padding: 6px 14px;
     border-radius: 5%;

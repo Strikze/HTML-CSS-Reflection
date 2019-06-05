@@ -1,2 +1,0 @@
-Gradients don't span full screen.
-Nav sub-bar link don't align to the left.

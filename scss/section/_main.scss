@@ -17,12 +17,13 @@
 }
 
 .about {
-    margin-top: 50px;
-    background-color: $colour-primary;
     color: white;
-     padding: 25px 25px 50px 25px;
+    padding: 25px 25px 50px 25px;
+    margin-top: 50px;
     line-height: 1.875;
 
+    // background
+    background-color: $colour-primary;
     @include mq('m') {
         // width=1194px height=484px
         background-image: url(/img/branded.png);
@@ -65,6 +66,7 @@
     }
 }
 
+// Swap image on hover
 .hover-img-swap > img:last-of-type {
     display: none;
 }
@@ -108,20 +110,12 @@
         grid-template-columns: repeat(3, auto 50px) auto;
      }
 
-    div:nth-of-type(1) {
-        grid-column: 1;
+    // Set grid columns
+    @for $i from 1 through 5 {
+        div:nth-of-type(#{$i}) {
+            grid-column: ($i * 2) - 1;
+        }
     }
-
-    div:nth-of-type(2) {
-        grid-column: 3;
-    }
-    
-    div:nth-of-type(3) {
-        grid-column: 5;
-    }
-    
-    div:nth-of-type(4) {
-        grid-column: 7;
-    }    
+        
 }
 
