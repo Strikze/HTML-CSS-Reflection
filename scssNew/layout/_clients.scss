@@ -1,0 +1,37 @@
+
+// Swap image on hover
+.hover-img-swap > img:last-of-type {
+    display: none;
+}
+
+.hover-img-swap:hover {
+    > img:first-of-type {
+        display: none;
+    }
+    > img:last-of-type {
+        display: inline;
+    }
+}
+
+.clients {
+    display: none;
+    padding-top: 50px;
+
+    @include mq('md') {
+        display: flex;
+        justify-content: space-between;
+    }
+
+     img {
+        height: 45px;
+
+        @include mq('lg') {
+            height: 60px;
+        }
+        @include mq('xl') {
+            height: 80px;
+        }        
+     }
+        
+}
+

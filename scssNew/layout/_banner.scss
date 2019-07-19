@@ -1,0 +1,33 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    height: calc(100vh - 110px);
+
+    background: url($path--rel + '/carousel/home-rRnH.jpg');
+    background-size: cover;
+    box-shadow: inset 50px 0 100px #000;
+}
+
+
+.banner-content {
+    color: white;
+    text-align: center;
+
+    @include mq('lg') {
+        text-align: left;
+    }
+
+    >h1 {
+        margin-bottom: em(25px, 48px);
+    }
+
+    >p {
+        margin: 0 0 em(35px, 20px);
+        font-size: em(20px);
+        line-height: em(36px, 20px);
+    }
+}
