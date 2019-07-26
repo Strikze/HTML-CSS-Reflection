@@ -11,6 +11,7 @@
     // flex item properties
     flex-basis: 100%;
     flex-grow: 1;
+    box-shadow: 0 3px 35px rgba(0,0,0,0.1);
 
     @include mq('md') {
         flex-basis: calc(50% - 30px);
@@ -79,6 +80,11 @@
         line-height: (22px / 13px);
         margin-top: 0;
     }
+
+    // button
+    >span {
+        margin-top: auto;
+    } 
 }
 
 .card {
